@@ -16,14 +16,26 @@ export class JoiningKit extends Component {
 
          <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    what u Want
+                </button>
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a className="dropdown-item" href="/">Pen</a>
+                    <a className="dropdown-item" href="/">Tumbler</a>
+                    <a className="dropdown-item" href="/">Diary</a>
+                </div>
+            </div>     
+            <br/>     
+            
+         <div className="dropdown">
+                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select your System Type
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a className="dropdown-item" href="/">Laptop</a>
-                    <a className="dropdown-item" href="/">Desktop</a>
+                    <a className="dropdown-item" href="/">desktop</a>
+                   
                 </div>
-            </div>     
-            <br/><br/>     
+            </div>
     </section>
     )
   }

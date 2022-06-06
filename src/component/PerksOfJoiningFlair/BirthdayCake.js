@@ -15,6 +15,7 @@ export class BirthdayCake extends Component {
                     Select your cake
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/">None</a>
                     <a class="dropdown-item" href="/">Chocolate</a>
                     <a class="dropdown-item" href="/">Vanila</a>
                     <a class="dropdown-item" href="/">ButterScotch</a>

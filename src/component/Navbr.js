@@ -14,15 +14,16 @@ export class Navbr extends Component {
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-            
-            <li className="nav-item"><Link className="nav-link" to="/">Enroll Yourself</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/ShootOut">ShootOut</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/Emp">Employee Management</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/Emp">Employeer Management</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/PerksOfJoining">PerksOfJoiningFlair</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/ShootOut">ShootOut</Link></li>
+
           </ul>  
         </div>
       </div>
     </nav>
-          </div> <br/><br/>
+          </div> 
           </section>
         )
       }
