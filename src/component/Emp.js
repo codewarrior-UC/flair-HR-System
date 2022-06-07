@@ -61,7 +61,7 @@ class App extends React.Component
   deleteEmployee=(id)=>
 {
   var e={
-    id:this.idbox.value,s
+    id:this.idbox.value,
     name:this.namebox.value,
     birthday:this.dobbox.value,
     joining:this.joiningbox.value,
@@ -95,7 +95,7 @@ deleteEmp=(id)=>{
     <div>
       <br/>
             <section>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>    <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
                 Add Employee</button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
