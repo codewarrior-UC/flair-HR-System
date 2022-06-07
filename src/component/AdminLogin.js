@@ -20,29 +20,27 @@ export class AdminLogin extends Component {
                         <div className="card-body p-4 p-lg-5 text-black">
 
                             <form>
+                                <div className="d-flex align-items-center mb-3 pb-1">
+                                    <i className="fas fa-cubes fa-2x me-3" ></i>
+                                    <span className="h1 fw-bold mb-0">FLAiR </span>
+                                </div>
 
-                            <div className="d-flex align-items-center mb-3 pb-1">
-                                <i className="fas fa-cubes fa-2x me-3" ></i>
-                                <span className="h1 fw-bold mb-0">FLAiR </span>
-                            </div>
+                                <h5 className="fw-normal mb-3 pb-3" >Sign into your account</h5>
 
-                            <h5 className="fw-normal mb-3 pb-3" >Sign into your account</h5>
+                                <div className="form-outline mb-4">
+                                    <input type="email" id="form2Example17" className="form-control form-control-lg" />
+                                    <label className="form-label" for="form2Example17">Email address</label>
+                                </div>
 
-                            <div className="form-outline mb-4">
-                                <input type="email" id="form2Example17" className="form-control form-control-lg" />
-                                <label className="form-label" for="form2Example17">Email address</label>
-                            </div>
+                                <div className="form-outline mb-4">
+                                    <input type="password" id="form2Example27" className="form-control form-control-lg" />
+                                    <label className="form-label" for="form2Example27">Password</label>
+                                </div>
 
-                            <div className="form-outline mb-4">
-                                <input type="password" id="form2Example27" className="form-control form-control-lg" />
-                                <label className="form-label" for="form2Example27">Password</label>
-                            </div>
-
-                            <div className="pt-1 mb-4">
-                                <button className="btn btn-dark btn-lg btn-block" type="button" >Login</button>
-                            </div>
+                                <div className="pt-1 mb-4">
+                                    <button className="btn btn-dark btn-lg btn-block" type="button" >Login</button>
+                                </div>
                             </form>
-
                         </div>
                         </div>
                     </div>

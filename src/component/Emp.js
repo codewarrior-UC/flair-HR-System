@@ -61,7 +61,7 @@ class App extends React.Component
   deleteEmployee=(id)=>
 {
   var e={
-    id:this.idbox.value,
+    id:this.idbox.value,s
     name:this.namebox.value,
     birthday:this.dobbox.value,
     joining:this.joiningbox.value,
@@ -94,68 +94,96 @@ deleteEmp=(id)=>{
     return(<>
     <div>
       <br/>
-<form>
-        <table align="center" border="2" cellPadding="10px"cellSpacing="10px">
-        <h3>User Registration Here</h3>
-        <br/>
-        <fieldset className="text-centre">
-        <legend align="center">User Registaration Form</legend>
-        <br/><br/>
-        <pre>
-          <label> ID :</label>
-        <input
-        ref={c=>this.idbox=c} 
-        onBlur={this.checkedId}
-        onFocus={()=>this.setState({isDuplicate:false})}
-        type="number" name="id" id="id" placeholder="Enter Your ID..." required/>
+            <section>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                Add Employee</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">User Registration Form</h5>
+                        <button type="button"  class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>     
+                        <table align="center" border="2" cellPadding="10px"cellSpacing="10px">
+                              {/* <h3>User Registration Form</h3> */}
+                              <br/>
+                              <fieldset className="text-centre">
+                              {/* <legend align="center">User Registaration Form</legend>
+                              <br/><br/> */}
+                              <pre>
+                                <label> ID :</label>
+                              <input
+                              ref={c=>this.idbox=c} 
+                              onBlur={this.checkedId}
+                              onFocus={()=>this.setState({isDuplicate:false})}
+                              type="number" name="id" id="id" placeholder="Enter Your ID..." required/>
+                              <br/> <br/>
+                            <div>     
+                              <label> Name :</label>
+                              <input ref={c=>this.namebox=c} type="name" name="name" id="name" placeholder="Enter Your Name..." required/>
+                              <br/> <br/>
+                              </div>
+                            <div>
+                              <label for="birthday">Birthday:</label>
+                              <input ref={c=>this.dobbox=c} type="date" name="birthday" id="birthday" placeholder="Enter Your bday" required/>
+                            </div>
+                            <div>
+                            <br/>
+                              <label for="birthday">Joining:</label>
+                              <input ref={c=>this.joiningbox=c} type="date" name="joining" id="joining" placeholder="Enter Your joiningday" required/>
+                              </div>
+                            <div>
+                            <br/>
+                              <label> City :</label>
+                              <input ref={c=>this.citybox=c} type="city" name="city" id="city" placeholder="Enter Your City..." required/>
+                              <br/>  
+                              </div>
+                            <div>
+                            <br/>
+                              <label> Email :</label>
+                              <input ref={c=>this.emailbox=c} type="email" name="email" id="email" placeholder="Enter Your email..." required/>
+                              </div>
+                            <div>
+                            <br/>
+                              <label> Phone :</label>
+                              <input ref={c=>this.phonebox=c} type="Phone" name="phone" id="phone" placeholder="Enter Your Phone..." required/>
+                              </div>
+                              <br/><br/>
 
-        <label> Name :</label>
-        <input ref={c=>this.namebox=c} type="name" name="name" id="name" placeholder="Enter Your Name..." required/>
 
-        <label for="birthday">Birthday:</label>
-        <input ref={c=>this.dobbox=c} type="date" name="birthday" id="birthday" placeholder="Enter Your bday" required/>
+                              {this.state.isDuplicate? 
+                              <b>"Employee Already Exit !"</b>
+                              :<button type="button" class="btn btn-dark" onClick={this.addEmp}
+                              // onClick={(e)=>{
+                              //   if(window.confirm("Do You Want To add This Record ?"))
+                              //   this.addEmp(e)
+                              // }}
+                              >AddEmployee</button>
+                              }
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                {this.state.deleteData.status ? 
+                                <b align="center">Are you sure to delete Employee Record({this.state.deleteData.id}) ?&nbsp;&nbsp;
+                                <button onClick={this.deleteEmployee}> Yes</button>
+                                &nbsp;&nbsp;
+                                  <button onClick={()=>this.setState({deleteData:{
+                                    status:false,
+                                    id:undefined
+                                  }})}>Close</button>
 
-        <label for="birthday">joining:</label>
-        <input ref={c=>this.joiningbox=c} type="date" name="joining" id="joining" placeholder="Enter Your joiningday" required/>
-
-        {/* <label for="anniversary">Anniversary:</label>
-        <input ref={c=>this.annibox=c} type="date" name="anniversary" id="anniversary" placeholder="Enter Your Anniversary" required/>
-        <br/><br/> */}
-        <label> City :</label>
-        <input ref={c=>this.citybox=c} type="city" name="city" id="city" placeholder="Enter Your City..." required/>
-        <br/><br/>  
-        <label> Email :</label>
-        <input ref={c=>this.emailbox=c} type="email" name="email" id="email" placeholder="Enter Your email..." required/>
-
-        <label> Phone :</label>
-        <input ref={c=>this.phonebox=c} type="Phone" name="phone" id="phone" placeholder="Enter Your Phone..." required/>
-        <br/><br/>
-
-
-        {this.state.isDuplicate? 
-        <b>"Employee Already Exit !"</b>
-        :<button  onClick={this.addEmp}
-        // onClick={(e)=>{
-        //   if(window.confirm("Do You Want To add This Record ?"))
-        //   this.addEmp(e)
-        // }}
-        >AddEmployee</button>
-        }
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        {this.state.deleteData.status ? 
-        <b align="center">Are you sure to delete Employee Record({this.state.deleteData.id}) ?&nbsp;&nbsp;
-        <button onClick={this.deleteEmployee}> Yes</button>
-        &nbsp;&nbsp;
-          <button onClick={()=>this.setState({deleteData:{
-            status:false,
-            id:undefined
-          }})}>Close</button>
-
-          </b>:""}
-        </pre>
-        </fieldset>
-        </table>
-</form>
+                                  </b>:""}
+                              </pre>
+                              </fieldset>
+                        </table>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             </section>
 <hr/>
 <h3 align="center">Employee Record Here</h3>
 <br/>  
@@ -166,7 +194,7 @@ deleteEmp=(id)=>{
   <th>ID</th>
   <th>Name</th>
   <th>birthday</th>
-  {/* <th>anniversary</th> */}
+
   <th>JOiningDate</th>
   <th>City</th>
   <th>Email</th>
@@ -181,15 +209,14 @@ deleteEmp=(id)=>{
 <td>{emp.id}</td>
 <td>{emp.name}</td>
 <td>{emp.birthday}</td>
-{/* <td>{emp.anniversary}</td> */}
 <td>{emp.joining}</td>
 <td>{emp.city}</td>
 <td>{emp.email}</td>
 <td>{emp.phone}</td>
 <td>
-  <button>Edit</button>
+  <button className= "btn btn-primary">Edit</button>
 &nbsp;
-  <button onClick={()=>this.deleteEmp(emp.id)}>Delete</button>
+  <button  className= "btn btn-danger" onClick={()=>this.deleteEmp(emp.id)}>Delete</button>
 </td>
   </tr>
 ))}
@@ -203,59 +230,3 @@ deleteEmp=(id)=>{
 export default App;
 
 
-
-// import React from 'react'
-
-// function Emp() {
-//   return (
-
-//       <section>
-//         <crud/>
-//     <form onSubmit={()=>{console.log("store data in database")}}>
-//   <div className="form-row">
-//     <div className="form-group col-md-6">
-//       <label for="inputName">Name:</label>
-//       <input type="text" className="form-control" id="" placeholder="Full Name"/>
-//     </div>
-//   </div>
-//   <div className="form-row">
-//     <div className="form-group col-md-6">
-//       <label for="inputAddress">Address:</label>
-//       <input type="text" className="form-control" id="" placeholder="Address"/>
-//     </div>
-//   </div>
-//   <div className="form-row col-md-6">
-//     <div className="form-group">
-//         <label for="inputPhoneNo.">PhoneNo.</label>
-//         <input type="number" className="form-control" id="" placeholder="ex-9101667263"/>
-//     </div>
-//     </div>  <div className="form-row">
-//     <div className="form-group col-md-6">
-//       <label for="inputCity">City</label>
-//       <input type="text" className="form-control" id="inputCity"/>
-//       <br/>
-//     </div>
-//   </div>
-
-//     <div className="input-group date" data-provide="datepicker">  
-//         <div>
-//         <label for="birthday">Birthday:</label>
-//         <input type="date" id="birthday" name="birthday"/>
-//         </div>
-//     </div>
-// <p></p>    
-//     <div className="input-group date" data-provide="datepicker">             
-//         <label for="Anniversary">Anniversary:</label>
-//         <input type="date" id="birthday" name="birthday"/>
-//     </div>
-
-//   <button type="submit" className="btn btn-primary" onClick={()=>{console.log("HAPPY HACKING")}}>Sign in</button>
-// </form>
-// <br/><br/>
-// </section>
-//   )
-// }
-
-
-// export default Emp
-// //data will be stored in any form of localStorage(excel/JSON)

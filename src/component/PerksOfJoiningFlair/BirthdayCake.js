@@ -9,7 +9,7 @@ export class BirthdayCake extends Component {
             {/* <h3>FORM</h3>
             <h4>-1- dropdown -- -cakesize- [1/2Kg or 1kg]-</h4>
                 <h4>text</h4> */}
-      
+        
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select your cake
@@ -23,6 +23,7 @@ export class BirthdayCake extends Component {
                 </div>
                 <br/><br/>
             </div>
+            
             <button type="submit" className="btn btn-primary" onClick={()=>{console.log("HAPPY Birthday")}}>Get your Cake Delivered</button>
       </div>
       <br/><br/>
@@ -32,3 +33,4 @@ export class BirthdayCake extends Component {
 }
 
 export default BirthdayCake
+
