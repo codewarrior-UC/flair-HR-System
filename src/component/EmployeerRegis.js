@@ -1,5 +1,5 @@
 import React from "react";
-import EmpRegistration from "./EmpRegistration";
+//import EmpRegistration from "./EmpRegistration";
 class App extends React.Component
 {
   constructor()
@@ -331,4 +331,4 @@ deleteEmp=(id)=>{
     );
   }
 }
-export default EmpRegistration;
+export default App;
