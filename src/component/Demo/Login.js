@@ -33,7 +33,7 @@ export default class Login extends React.Component {
     }
     render() {
        if(this.state.islogin)
-       return <Navigate to="/Navbr"/>
+       return <Navigate to="/Home"/>
        else  
         return (
           <section className="vh-100" >
@@ -65,7 +65,7 @@ export default class Login extends React.Component {
                                     placeholder="email ..."
                                     required
                                      />
-                                    <label className="form-label" for="form2Example17">Email address</label>
+                                    <label className="form-label"  htmlFor="form2Example17">Email address</label>
                                 </div>
 
                                 <div className="form-outline mb-4">
@@ -77,7 +77,7 @@ export default class Login extends React.Component {
                                     placeholder="Password..."
                                     required
                                     />
-                                    <label className="form-label" for="form2Example27">Password</label>
+                                    <label className="form-label"  htmlFor="form2Example27">Password</label>
                                 </div>
 
                                 <div className="pt-1 mb-4">
